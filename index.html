@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+</head>
+<style type="text/css">
+	body{
+		background:#F7EBDF;
+	}
+	.container{
+		position: absolute;
+		top: 50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width: 50vw;
+		height: 70vh;
+		background:var(--main-color);
+		border-radius: 5px;
+		overflow: hidden;
+		color:#797d7f;
+		letter-spacing: 0.5px;
+		display: grid;
+	}
+	.inner{
+		position:absolute;
+		height:100%;
+		width: 100%;
+		opacity: 1;
+		-webkit-transition:1s;
+		transition: 1s;
+		background-color:#5A8BD4;
+	}
+	.box{
+		position: absolute;
+		top:50%;
+		left:50%;
+		width: 80%;
+		height: 70%;
+		-webkit-transform:translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		background:#fff;
+		border-radius: 5px;
+		overflow: hidden;
+		box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+		font-size: ;
+	}
+	.number::before{
+		content :"";
+		position: absolute;
+		top:-130px;
+		right:-30px;
+		width:90px;
+		height:200px;
+		background:var(--secondary-color);
+		-webkit-transform:rotate(-45deg);
+		transform: rotate(-45deg);
+		z-index:-1;
+		box-shadow: 0 0 0.7rem rgba(0,0,0,0.5);
+	}
+	.number{
+		font-family: var(--sans);
+		position: absolute;
+		margin:0;
+		top:15px;
+		right:15px;
+		color:rgba(255,255,255,0.7);
+	}
+	.number img{
+		width: 30px;
+		height:30px;
+		position: absolute;
+		left:-25px;
+		top:-7px;
+		cursor:pointer;
+		animation:rot ls linear; 
+	}
+	.number:hover img{
+		animation:rot ls linear;
+	}
+	@keyframes rot{
+		from{
+			transform:rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	}
+
+	.text{
+		margin-left: 25px;
+		margin-right: 25px;
+		margin-top:100px;
+		color:#000;
+		
+	}
+	.quotes{
+		font-size: 18px;
+	}
+	.button{
+   position:absolute;
+  top: 280px;
+  padding: 10px;
+   width:100%;
+  
+	}
+	.author{
+		font-size: 16px;
+		float:right;
+	}
+	label{
+		background-color:#0E5ED5;
+		color:#fff;
+	}
+  h3 p{
+  	display: inline-block;
+  }
+   i,p{
+  	display: inline;
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.text{
+		margin-top: 30px;
+	
+		
+	}
+		.button{
+   top: 190px;
+ 
+  
+	}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+		.text{
+		margin-top: 100px;
+          
+		
+	}
+		.button{
+   top: 280px;
+ 
+  
+	}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+			.text{
+		margin-top: 100px;
+         
+		
+	}
+		.button{
+   top: 250px;
+ 
+  
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+</style>
+<body>
+
+  
+  
+ 
+
+		<div class="container">
+			<div class="inner">
+				<div  class="box" >
+					<p class="number">
+						<img src="/home/bhairavi/Desktop/quotes/tweet.jpeg" alt="TweetMe" title="TweetMe" id="tweetme">
+					</p>
+					   <div class="text">
+                        <div class="in">
+                            <i class="fa fa-quote-left" style="font-size:15px"></i>
+
+                             <p id="quotes" class="quotes"></p>
+                        	
+                             <i class="fa fa-quote-right" style="font-size:15px"></i>
+
+                       </div>
+
+					        <h3 class="author">-By <p id="author" ></p></h3>
+					  </div>
+                       
+                  	<label class="button">
+						<center>
+						<p id="new_quote"><b>New Quotes</b></p>
+					</center>
+					</label>
+                   </div>
+
+
+
+				
+				
+			</div>
+		</div>
+         
+
+		  <!--<div style="background-color: #fff;">
+                   <p id="quotes" class="quotes"></p>
+                   <h3 class="author">-By <p id="author" ></p></h3>
+                   <p id="new_quote"><b>New Quotes</b></p>
+                   </div>-->
+	
+<script type="text/javascript">
+	const quotes = document.getElementById("quotes");
+	const author = document.getElementById("author");
+	const new_quote = document.getElementById("new_quote");
+	const tweetme = document.getElementById("tweetme");
+
+	let realData="";
+	let quoteData="";
+
+       const tweetNow = () => {
+       	let tweetPost= `https://twitter.com/intent/tweet?text=${quoteData.text}`;
+         window.open(tweetPost);
+       };
+
+        const getNewQuotes = () => {
+         let rnum = Math.floor(Math.random() * 30);
+       //  console.log(realData[rnum].author);
+          quoteData=realData[rnum];
+         quotes.innerText = `${quoteData.text}`;
+         if(quoteData.author == null)
+         {
+         author.innerText = "Unknown";
+         }
+         else{
+         	 author.innerText = `${quoteData.author}`;
+         }
+        };
+
+	const getQuotes = async()=>{
+		const api = "https://type.fit/api/quotes";
+       try{
+          let data = await fetch(api);
+           realData = await data.json();
+
+           getNewQuotes();
+           // console.log(realData.length);
+         // console.log(realData[10].text);
+       
+       }catch(error) {}
+	};
+
+	tweetme.addEventListener("click",tweetNow);
+
+	new_quote.addEventListener("click",getNewQuotes);
+	getQuotes();
+</script>
+
+
+</body>
+</html>
